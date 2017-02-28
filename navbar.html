@@ -1,0 +1,55 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container text-uppercase">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="./index.html">Site Name</a>
+	</div>
+	<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="./index.html">Home</a></li>
+			<li><a href="./index.html">WordPress</a></li>
+			<li><a href="./index.html">CodeIgniter</a></li>
+			<li><a href="./index.html">Python</a></li>
+			<li class="dropdown">
+				<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Java <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Struts</a></li>
+					<li><a href="#">Spring</a></li>
+					<li><a href="#">Hibernate</a></li>
+					<li><a href="#">MyBatis</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a></li>
+		</ul>
+		<form class="navbar-form navbar-left" method="get" action="<?php echo home_url( '/' ); ?>">
+			<div class="form-group">
+				<input type="text" name="s" id="s" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-success" aria-label="Left Align"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		</form>
+		<ul class="nav navbar-nav navbar-right">
+					<!-- if (login) -->
+			<li class="dropdown">
+				<a href="<?php echo admin_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dashboard"></i> Admin <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li class="dropdown-header">常用</li>
+					<li><a href="<?php echo admin_url() ?>post-new.php"><i class="fa fa-pencil"></i> 添加文章</a></li>
+					<li><a href="<?php echo admin_url() ?>link-add.php"><i class="fa fa-link"></i> 添加链接</a></li>
+					<li><a href="<?php echo admin_url() ?>media-new.php"><i class="fa fa-upload"></i> 添加附件</a></li>
+					<li role="separator" class="divider"></li>
+					<li class="dropdown-header">其它</li>
+					<li><a href="<?php echo admin_url() ?>post-new.php?post_type=page"><i class="fa fa-edit"></i> 添加页面</a></li>
+					<li><a href="<?php echo wp_logout_url()?>"><i class="fa fa-sign-out"></i> 安全退出</a></li>
+				</ul>
+			</li>			
+			<!-- else -->
+			<!--<li><a href="#"><i class="fa fa-sign-in"></i> Sign in</a></li>-->
+		</ul>
+	</div><!--/.nav-collapse -->
+  </div>
+</nav>
